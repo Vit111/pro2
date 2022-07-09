@@ -3,15 +3,16 @@ let lastname = prompt('What is your lastname?', '').trim();
 console.log("Full name:",firstname,lastname);
 let email = prompt('What is your email?', '').replaceAll(' ').toLowerCase();
 let mail = email.indexOf('@');
+let mail2 = email;
 let namemail = "Email:";
 if (mail === -1) {
-    email = `not valid email <b>${mail}</b> (symbol @ not exist)`;
+    email = `not valid email <b>${mail2}</b> (symbol @ not exist)`;
     console.log(namemail,email);
 }else if (email.startsWith('@')) {
-    email = `not valid email <b>${email}</b> (symbol @ find in first place)`;
+    email = `not valid email <b>${mail2}</b> (symbol @ find in first place)`;
     console.log(namemail,email);
 } else if (email.endsWith('@')) {
-    email = `not valid email <b>${email}</b> (symbol @ find in last place)`;
+    email = `not valid email <b>${mail2}</b> (symbol @ find in last place)`;
     console.log(namemail,email);
 } else {
     console.log(namemail,email);
